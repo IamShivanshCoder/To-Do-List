@@ -1,0 +1,96 @@
+body {
+    font-size: 15pt;
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.completed{
+  text-decoration: line-through;
+  color:grey;
+  border: 1px solid gray;
+}
+.shape{
+  z-index:2;
+  position: absolute;
+  filter: blur(35px);
+}
+
+.s1{
+  transform: translate(60px,80px) rotate(30deg);
+  border-radius: 40px;
+  background: pink;
+  width: 200px;
+  height: 200px;
+}
+
+.s2{
+  transform: translate(-130px,-110px) rotate(30deg);
+  border-radius: 50%;
+  background:lightblue;
+  width: 300px;
+  height: 300px;
+}
+.s3{
+  width: 150px;
+  height: 250px;
+  background: #D28AFF;
+  border-radius: 40px;
+  transform: translate(140px,-110px) rotate(70deg);
+}
+
+#todo-container{
+  z-index:3;
+  background-image: linear-gradient(80deg, 
+  rgba(255, 255, 255,.3),
+  rgba(0, 0, 0, .1)
+  );
+  box-shadow: 0 0  20px rgba(0,0,0,.1);
+  background-size: 25px ;
+  display: flex;
+  border-radius: 10px;
+  flex-direction: column;
+  transition-duration: height 3s;
+  transition: all 2 ease;
+  padding: 20px;
+}
+#input_box{
+  background: transparent;
+  border: 2px solid rgba(0,0,0,.3);
+  height:35px;
+  border-radius: 18px;
+  padding: 0 10px;
+  width:250px;
+  backdrop-filter: blur(10px)
+}
+#input-button{
+  
+}
+
+
+
+
+
+
+
+
+@keyframes ani{
+  0%{
+    opacity: 0;
+    transform: scaleY(0) translateY(-100%);
+  }
+  100%{
+    opacity: 1;
+    transform: scaleY(1) translateY(0%);
+  }
+}
+#appendc{
+  -webkit-animation: ani linear .3s;
+  -o-animation: ani linear .3s;
+  animation: ani linear .3s;
+  animation-iteration-count: 1;
+}
